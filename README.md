@@ -2,6 +2,9 @@
 
 This repository contains the source code for **Meteor Madness — Multi-Asteroid Impact Simulator**, developed by **InfotronX**.
 
+I am publishing it on my GitHub as part of my portfolio, since I was the main contributor to the project and worked on most of the implementation.
+The project also reflects team collaboration during the season.
+
 ## About the Project
 
 Meteor Madness is an interactive web application focused on asteroid impact simulation, visualization, and educational exploration.
