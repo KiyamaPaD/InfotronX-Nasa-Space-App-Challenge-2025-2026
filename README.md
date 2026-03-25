@@ -72,6 +72,14 @@ python -m http.server 8000
 
 Then open this in your browser: `http://localhost:8000`
 
+## Recognition
+
+One of the most important achievements of this project was that our team became a **Global Nominee** in the **NASA Space Apps Challenge**.
+
+This distinction reflects the impact, originality, and technical effort behind our work.
+
+[Our Team's Profile](https://www.spaceappschallenge.org/2025/find-a-team/infotronx5/).
+
 ## Why this project matters
 
 This project represents more than a simple website.  
