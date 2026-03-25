@@ -1,6 +1,6 @@
-# Meteor Madness | InfotronX_2
+# Meteor Madness | InfotronX
 
-This repository contains the source code for **Meteor Madness — Multi-Asteroid Impact Simulator**, developed by **InfotronX_2**.
+This repository contains the source code for **Meteor Madness — Multi-Asteroid Impact Simulator**, developed by **InfotronX**.
 
 ## About the Project
 
@@ -95,5 +95,5 @@ It is intended for demonstration and learning purposes, not for professional haz
 
 ## Creator
 
-Created by **Cristi Gabor** / **InfotronX_2**  
+Created by **Cristi Gabor** / **InfotronX**  
 GitHub: [KiyamaPaD](https://github.com/KiyamaPaD)
