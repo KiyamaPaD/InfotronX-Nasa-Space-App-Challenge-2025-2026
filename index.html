@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meteor Madness — Multi-Asteroid Impact Simulator</title>
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<header>
+  <h1>Meteor Madness — Multi-Asteroid Impact Simulator</h1>
+  <div class="subtitle">
+    Add multiple asteroids, tune parameters, click <b>Compute</b>, then click on the map to place the impact
+    for the <b>Active asteroid</b>. We draw <span class="legend-dot red"></span> severe (red),
+    <span class="legend-dot yellow"></span> moderate (yellow), and <span class="legend-dot green"></span> minor (green) effect radii.
+  </div>
+</header>
+
+<div class="container grid">
+  <section class="card">
+    <h2 class="section-title">1) Asteroids & parameters</h2>
+
+    <div class="row" style="gap:8px; flex-wrap:wrap">
+      <label style="flex:0 0 auto">Active asteroid</label>
+      <select id="activeSelect"></select>
+      <button id="addAst" class="primary">Add asteroid</button>
+      <button id="removeAst">Remove active</button>
+      <label class="inline-pill">
+        <input type="checkbox" id="toggleAll" checked />
+        <span>Show all</span>
+      </label>
+    </div>
+
+    <div id="asteroidControls" style="margin-top:8px"></div>
+
+    <hr class="separator" style="margin:14px 0">
+
+    <div class="row">
+      <label>Population density (people/km²)</label>
+      <input type="range" id="popdens" min="0" max="20000" step="100" value="1500" />
+      <div class="value"><span id="popdensVal">1500</span></div>
+    </div>
+
+    <div class="row" style="justify-content:flex-end; margin-top:16px">
+      <button id="calc" class="primary">Compute</button>
+      <button id="export">Export PNG</button>
+    </div>
+
+    <hr class="separator">
+
+    <h2 class="section-title">2) Results & story</h2>
+
+    <div class="kpis" id="kpis">
+      <div class="kpi"><div class="label">Total energy at ground (J)</div><div class="val" id="energyOut">—</div></div>
+      <div class="kpi"><div class="label">Total TNT eq. (Mt)</div><div class="val" id="tntOut">—</div></div>
+      <div class="kpi"><div class="label">Exposed population (est.)</div><div class="val" id="popOut">—</div></div>
+      <div class="kpi"><div class="label">Highest risk</div><div class="val" id="riskOut"><span class="risk low">—</span></div></div>
+    </div>
+
+    <canvas id="chart" height="160" style="margin-top:16px"></canvas>
+
+    <p class="story" id="story">
+      Enter parameters, click <b>Compute</b>, then click on the map to position the <b>Active asteroid</b>.
+      For each asteroid, we show estimated radii for <i>severe</i> (red), <i>moderate</i> (yellow), and
+      <i>minor</i> (green) effects; population exposure uses the <i>moderate</i> area.
+    </p>
+
+    <p class="note">Educational model with simple approximations (atmospheric losses, cubic scaling). Not a professional hazard tool.</p>
+  </section>
+
+  <section class="card map-card">
+    <h2 class="section-title">3) Map — choose impact location for the Active asteroid</h2>
+    <div id="map"></div>
+    <div id="mapLegend" class="map-legend">
+      <div><span class="legend-swatch red"></span> Severe</div>
+      <div><span class="legend-swatch yellow"></span> Moderate</div>
+      <div><span class="legend-swatch green"></span> Minor</div>
+    </div>
+    <div class="pills">
+      <span class="pill">Click on map = impact center (for Active asteroid)</span>
+      <span class="pill" id="radiiOut">Radii: —</span>
+    </div>
+  </section>
+</div>
+
+<footer>
+  © 2025 — Educational demo for NASA Space Apps (MVP).
+</footer>
+
+<script src="assets/js/app.multi.js"></script>
+</body>
+</html>
