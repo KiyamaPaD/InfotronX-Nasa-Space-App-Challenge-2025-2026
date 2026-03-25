@@ -5,6 +5,8 @@ This repository contains the source code for **Meteor Madness — Multi-Asteroid
 I am publishing it on my GitHub as part of my portfolio, since I was the main contributor to the project and worked on most of the implementation.
 The project also reflects team collaboration during the season.
 
+🏆 **Global Nominee** — our team was internationally recognized as a **Global Nominee** in the NASA Space Apps Challenge.
+
 ## About the Project
 
 Meteor Madness is an interactive web application focused on asteroid impact simulation, visualization, and educational exploration.
