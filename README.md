@@ -106,6 +106,10 @@ The repository includes:
 This project is an **educational simulation** and uses simplified approximations.  
 It is intended for demonstration and learning purposes, not for professional hazard analysis.
 
+## Screenshots
+
+![HomePage](assets/img/HomePage.jpg)
+
 ## Creator
 
 Created by **Cristi Gabor** / **InfotronX**  
