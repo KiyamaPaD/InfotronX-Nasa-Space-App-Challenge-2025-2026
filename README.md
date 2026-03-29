@@ -50,27 +50,12 @@ The project was designed to provide a dynamic and engaging way to explore astero
 
 ## Demo
 
-This project can be run locally in the browser.
+[Demo Live]()
 
-### Local Live Demo
+### Video Presentation (recorded and edited by me)
 
-You can start a local live demo using one of the following methods:
+[Presentation](https://www.youtube.com/watch?v=8UbYHN0Mc7g)
 
-**Option 1 — VS Code Live Server**
-1. Open the project folder in **VS Code**
-2. Install the **Live Server** extension
-3. Right-click `index.html`
-4. Click **Open with Live Server**
-
-**Option 2 — Python local server**
-
-Run this command inside the project folder:
-
-```bash
-python -m http.server 8000
-```
-
-Then open this in your browser: `http://localhost:8000`
 
 ## Recognition
 
