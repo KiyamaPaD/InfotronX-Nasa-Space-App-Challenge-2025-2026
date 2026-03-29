@@ -50,7 +50,7 @@ The project was designed to provide a dynamic and engaging way to explore astero
 
 ## Demo
 
-[Demo Live]()
+[Demo Live](https://inftronx-nasa-space-app-challenge25.netlify.app)
 
 ### Video Presentation (recorded and edited by me)
 
